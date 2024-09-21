@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Next Adventure</title>
+  <!-- Removed the link tag for SCSS since it's handled by Webpack -->
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Your Next Adventure Awaits</h1>
+    </header>
+
+    <section class="search-section">
+      <form id="travelForm">
+        <div class="input-group">
+          <label for="destination">Destination</label>
+          <input type="text" id="destination" name="destination" placeholder="Enter your destination" required />
+        </div>
+        <div class="input-group">
+          <label for="departureDate">Departure Date</label>
+          <input type="date" id="departureDate" name="departureDate" required />
+        </div>
+        <button class="search-btn" type="submit">Search</button>
+      </form>
+    </section>
+
+    <section id="results">
+      <div id="weather-results"></div>
+      <div id="image-container"></div>
+    </section>
+  </div>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
+                console.log('Service Worker registered with scope:', registration.scope);
+            }).catch(function(error) {
+                console.error('Service Worker registration failed:', error);
+            });
+        });
+    }
+  </script>
+</body>
+</html>

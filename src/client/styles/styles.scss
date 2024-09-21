@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base styling for body with a background image and full page setup */
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url("../views/image.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 40px;
+  color: #333;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header styling with text shadow for better visibility on background */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+
+  h1 {
+    font-size: 3em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Styling for the search form section with a subtle shadow and rounded corners */
+.search-section {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+
+  .input-group {
+    margin-bottom: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    /* Input fields styling with padding and border radius for better user experience */
+    input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+  }
+
+  /* Button styling with hover effect */
+  .search-btn {
+    width: 100%;
+    background: #00796b;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s;
+
+    &:hover {
+      background: #004d40;
+    }
+  }
+}
+
+/* Results section styling to ensure consistent look */
+#results {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Styling for the weather result box */
+#weather-results {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+
+  p {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+}
+
+/* Image container styling to ensure responsiveness */
+#image-container {
+  text-align: center;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+}
+
+/* Media queries for responsive design */
+
+/* Medium screen adjustments */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  .search-section {
+    padding: 20px;
+  }
+
+  .search-btn {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  #results {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* Small screen adjustments */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  .search-btn {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
